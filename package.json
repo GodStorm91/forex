@@ -4,7 +4,7 @@
   "description": "",
   "main": "install.js",
   "dependencies": {
-    "node-fetch": "^1.6.3"
+    "node-fetch": "^1.7.3"
   },
   "devDependencies": {},
   "scripts": {
