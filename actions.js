@@ -18,6 +18,25 @@ const parseConvertCommand = (command) => {
   return null;
 };
 
+const callFixer = (command) => {
+  const url = `https://api.fixer.io/latest?base=${command.source}&symbols=${command.target}`;
+  console.log(`Requesting ${url}`);
+  return fetch(url)
+    .then(response => response.json())
+    .then((json) => {
+      if (json.error === 'Invalid base') {
+        return `No rates found for currency "${command.source}"`;
+      }
+      if (!json.rates[command.target]) {
+        return `No rates found for currency "${command.target}"`;
+      }
+      const result = json.rates[command.target] * command.amount;
+      const displayResult = parseFloat(Math.round(result * 100) / 100).toFixed(2);
+      return `${command.amount}${command.source} is ${displayResult}${command.target}`;
+    });
+};
+
+
 // Generate a response to the command.
 const doCommand = (event) => {
   const rawCommand = event.slack.event.text;
@@ -25,8 +44,8 @@ const doCommand = (event) => {
   const convertCommand = parseConvertCommand(command);
   if (convertCommand) {
     return convertCommand;
-    // return callFixer(convertCommand)
-    //   .then(reply => Object.assign(event, { reply }));
+    return callFixer(convertCommand)
+      .then(reply => Object.assign(event, { reply }));
   }
   const defaultReply = `I'm sorry, I don't understand the command "${command}"
 Please use a format like "convert 1AUD to USD"`;
