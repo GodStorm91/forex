@@ -1,3 +1,5 @@
+const fetch = require('node-fetch');
+
 const log = (event) => {
   console.log('Event', JSON.stringify(event, null, 2));
   return Promise.resolve(event);
@@ -43,7 +45,6 @@ const doCommand = (event) => {
   const command = getCommand(rawCommand);
   const convertCommand = parseConvertCommand(command);
   if (convertCommand) {
-    return convertCommand;
     return callFixer(convertCommand)
       .then(reply => Object.assign(event, { reply }));
   }
