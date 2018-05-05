@@ -43,6 +43,7 @@ const checkForMention = (event) => { // eslint-disable-line consistent-return
   const message = event.slack.event.text;
   const botUserId = event.team.bot.bot_user_id;
   const botUserIsMentioned = new RegExp(`^<@${botUserId}>.*$`);
+  console.log(`Message is: ${message}`);
   if (botUserIsMentioned.test(message)) {
     console.log(`Bot ${botUserId} is mentioned in "${message}"`);
     return event;
