@@ -4,7 +4,9 @@
   "description": "",
   "main": "install.js",
   "dependencies": {
-    "node-fetch": "^1.7.3"
+    "firebase": "^4.13.1",
+    "node-fetch": "^1.7.3",
+    "npm": "^6.0.0"
   },
   "devDependencies": {},
   "scripts": {

@@ -17,6 +17,8 @@ provider:
     INSTALL_ERROR_URL: http://serverlessslackbot.s3-website-us-east-1.amazonaws.com/#error
     INSTALL_SUCCESS_URL: http://serverlessslackbot.s3-website-us-east-1.amazonaws.com/#success
     VERIFICATION_TOKEN: LetDeT2Uc8tp1u2bOxGSmSSa
+    SERVICE_ACCOUNT: forex-1b1aea978c45.json
+    DATABASE_URL: https://forex-21895.firebaseio.com/
     NAMESPACE: ${self:custom.namespace}
     TEAMS_TABLE: ${self:custom.namespace}-teams
   iamRoleStatements:

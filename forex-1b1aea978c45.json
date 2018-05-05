@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "forex-21895",
+  "private_key_id": "1b1aea978c456e2a24dc0377e1bc5e9ca7bf1e6c",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQC5dgGNISQukWLt\nnkD+YKHfwdq9eno7LosZt2G5PbT6zLMPz1oQtZ0eB4Sj0jeumZ/GPWY1IHNSRkyX\nmBejpgowDOg3nReBo9wKeuWoBGeLc2lZ5Iq0G4xxzsl3mQi5p4OeJIPPsRclSiwH\n2YOGydQXICLfMhxwHVXgluLUUcGaoUz2kvY3QrwB2uLSeKXHQ222Vdr7ZNU8yNJE\ngcs8hj7XxDlcXjqpcSTK9janvPPEDoJ3j5QkiWPy8TJGMZTaoisMuMXuH7VI4qlD\nrYNOUgSV+9hd7gnaq8DWlE9dTctd1SVOrRwHT14IpwBPbJUdB8UC8lEGvMGAeH5R\nnnm0tpGxAgMBAAECggEABdAOl8PY9obu4eXQsYxZrHm+42sNHVFd0Zs1WlUGWOk9\nKD7iarVHgLFBgXExdrTozKHAZCRBiwvKIyL0pDfcOEHyTgpr2f/G0fMEw0uqi2TN\nUbCDnqYhpHBD0R5cNzXqbpSkRzhcomoBB+izyi/lmGk04JgZazPnLPYrszYCBniv\ns70GevZZ9ILsnaS2U2sPtVwZkD9DXleXj4PzGGqmDPvji6yEIdHfJq8B2K/pVO2m\nmdSXwWGhW0RL4R6TMIhwIgrD8RrPiic/5NctNgtK0HLKXFVpZeJtGkk9QFjUAO4S\nLh6CDtZel4kWKZ5/P2yIu4P9XRE0vfSl/skB0c8uwQKBgQDlRtm77BjV/LFYJogm\nBr3sNjsdMx+y0fPrM8ZrLmQfKP25w4fxyQHSXWIjuxrq6PNajel1yN70GLap3rPZ\n4bKV/61irfpoj0HLw3hFC3GsM9llvQcm0S62ztdLGuN2e7pbAvRcXYNsp/EIEgfs\nPIDV5CISQ8GlddNJ0Y/ALDNqcQKBgQDPE8ggAXsfHEngGQlT65B/Hm7kd9mgMCai\nPXMpO/WWeoIKh4tp0reYlqPj+f2o0QNdAgN04O0bt0gfbbx1jBf7IFQGuGwSeOyk\nkHiphIh7f9KZP6nb33CH64twoYe1ZrPquw5bHu9+sqgoXlaVzYJTmxL4ELv2AEyN\nQOx+H2i7QQKBgEitKruc3UqHbRfKLwIOxQkpL5fT6speLvlxUgYLkIUoEzVdO6xy\n0PcDzuYQmzm3Wdxse4Jwh+vMIaq7AzufhWJyx10uVN/r+SlD7s3EEOZLETBkuO2f\nBTXBXxFZlpyqH6pVx2u34L8ChS7PuF8z1or2Y65yd+Gg9bbCjNSXrjyhAoGAGphe\nzoWCK5e1gTuV8BpD/5+H/H3MDH/Cpnmf7b7OptnrE7Ee3aN7gvRt7hywUFsvxGU6\nzmsI6NNcRvUQDETG27DmOcq7zo+LTQNlC9iCsuHSyW3cwelriXld+kQ0qr6bAt2t\nVVSey7XkVPLwyeKQB27WO9fiXBDjxAx/kx8zk0ECgYBs1SkBIkx1bGfWIVDMs/Hx\n6/pswl4oTALWBBUnInxMo7zgvpAyAqau/LvHJH3Hm5mWLGlEZesq4O6cHuuLutP7\n8fY+kjsmCy6wgnaDfsnf+85lgFtNr5PH/EXzjUYsDGyUKyqYtAylGaOremMfdxP6\nTOrpkIMD715hvNFRzUQpoQ==\n-----END PRIVATE KEY-----\n",
+  "client_email": "serverless-forex@forex-21895.iam.gserviceaccount.com",
+  "client_id": "100362849112967425719",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://accounts.google.com/o/oauth2/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/serverless-forex%40forex-21895.iam.gserviceaccount.com"
+}
