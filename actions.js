@@ -38,6 +38,24 @@ const callFixer = (command) => {
     });
 };
 
+// Send a response via Slack.
+const sendResponse = (event) => {
+  const params = {
+    token: event.team.bot.bot_access_token,
+    channel: event.slack.event.channel,
+    text: event.reply,
+  };
+  const url = `https://slack.com/api/chat.postMessage?${qs.stringify(params)}`;
+  console.log(`Requesting ${url}`);
+  return fetch(url)
+    .then(response => response.json())
+    .then((response) => {
+      if (!response.ok) throw new Error('SlackAPIError');
+      return Object.assign(event, { response });
+    });
+};
+
+
 
 // Generate a response to the command.
 const doCommand = (event) => {
@@ -55,7 +73,7 @@ Please use a format like "convert 1AUD to USD"`;
 
 module.exports.handler = (event, context, callback) => log(event)
   .then(doCommand) // Attempt the command
-  // .then(sendResponse) // Update the channel
+  .then(sendResponse) // Update the channel
   .then(log) // Testing: Log event
   .then(() => callback(null)) // Sucess
   .catch(callback); // Error
