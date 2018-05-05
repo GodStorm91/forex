@@ -55,8 +55,6 @@ const sendResponse = (event) => {
     });
 };
 
-
-
 // Generate a response to the command.
 const doCommand = (event) => {
   const rawCommand = event.slack.event.text;
