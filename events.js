@@ -1,8 +1,12 @@
 /* eslint-disable no-console */
 const AWS = require('aws-sdk'); // eslint-disable-line
+const firebase = require('firebase'); 
 
 const lambda = new AWS.Lambda();
-const dynamodb = new AWS.DynamoDB.DocumentClient();
+firebase.initializeApp({
+  serviceAccount: process.env.SERVICE_ACCOUNT,
+  databaseURL: process.env.DATABASE_URL
+})
 
 // Get JUST the Slack event.
 const getSlackEvent = event => ({ slack: JSON.parse(event.body) });
@@ -27,15 +31,13 @@ const verifyToken = (event) => {
 
 // Get the team details form DDB.
 const getTeam = (event) => {
-  const params = {
-    TableName: process.env.TEAMS_TABLE,
-    Key: {
-      team_id: event.slack.team_id,
-    },
-  };
-  console.log('dynamodb.get', params);
-  return dynamodb.get(params).promise()
-    .then(data => Object.assign(event, { team: data.Item }));
+  const ref = firebase.database().ref("teams/" + event.slack.team_id);
+  return ref.once('value').then(function(dataSnapshot){
+      console.log('Teams:' + dataSnapshot.val());
+      return Object.assign(event, {team: dataSnapshot.val()});
+  });
+  // return dynamodb.get(params).promise()
+  //   .then(data => Object.assign(event, { team: data.Item }));
 };
 
 // Check for mention.

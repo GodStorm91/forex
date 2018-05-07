@@ -40,15 +40,10 @@ const requestToken = (code) => {
 const saveResponse = (response) => {
   const database = firebase.database().ref();
   console.log('Put', response);
-  return new Promise(function(resolve, reject){
-    database.set(response).then(resolve,reject);
+  return new Promise(function(resolve, reject) {
+    database.child('teams').child(response.team_id).set(response);
+    return resolve();
   });
-  // const params = {
-  //   TableName: process.env.TEAMS_TABLE,
-  //   Item: response,
-  // };
-  // console.log('Put', response);
-  // return dynamodb.put(params).promise();
 };
 
 const successResponse = callback => callback(null, {
